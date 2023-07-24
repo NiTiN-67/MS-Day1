@@ -1,0 +1,109 @@
+//Datatypes are Implicit in JS
+undefined
+`Immutable Type/ Value Type`
+'Immutable Type/ Value Type'
+`Number - (0-9), decimal, infinity(Error Value), NaN(Error Value)`
+'Number - (0-9), decimal, infinity(Error Value), NaN(Error Value)'
+Helper Methods- isNaN(), isFinite()
+VM582:1 Uncaught SyntaxError: Unexpected identifier 'Methods'
+var a = '100';
+undefined
+a + 200;
+'100200'
+parseInt(a) = 200;
+VM693:1 Uncaught ReferenceError: Invalid left-hand side in assignment
+    at <anonymous>:1:1
+(anonymous) @ VM693:1
+parseInt(a) + 200;
+300
+parseFloat('100.2') + 200;
+300.2
+//Helper Methods- isNaN(), isFinite(), parseInt(), parseFlaot()
+undefined
+//String
+AutomaticTypeCasting
+String + Number = String
+Number + String = Number
+Number - String = String//
+VM1168:3 Uncaught SyntaxError: Invalid left-hand side in assignment
+/*Operator(**) Exponent (ES8)*/
+undefined
+var a = 10;
+undefined
+a**3;
+1000
+a - 1;
+9
+a*10;
+100
+a = `Duniya ye
+thodi thodi hai
+behtar lage`;
+'Duniya ye\nthodi thodi hai\nbehtar lage'
+console.log(a);
+VM1498:1 Duniya ye
+thodi thodi hai
+behtar lage
+undefined
+//String can be build using "", '', ``
+undefined
+//`` can be used to print dynamic values [${}]
+undefined
+a = 25;
+25
+`A is ${a}`;
+'A is 25'
+//c) boolean - true, false
+undefined
+a = `Duniya ye
+thodi thodi hai
+behtar lage`;
+'Duniya ye\nthodi thodi hai\nbehtar lage'
+a.toU
+undefined
+a.toUpperCase();
+'DUNIYA YE\nTHODI THODI HAI\nBEHTAR LAGE'
+console.log(a);
+VM2033:1 Duniya ye
+thodi thodi hai
+behtar lage
+undefined
+a = a.toUpperCase();
+'DUNIYA YE\nTHODI THODI HAI\nBEHTAR LAGE'
+console.log(a);
+VM2107:1 DUNIYA YE
+THODI THODI HAI
+BEHTAR LAGE
+undefined
+//OBJECT
+undefined
+var nitin = {id : 18, Name : 'Nitin', Address : 'Delhi'};
+undefined
+typeof nitin;
+'object'
+var temp = {'Delhi' : 40, 'Mumbai' : 29, 'Pune' : 27};
+undefined
+temp('Delhi');
+VM2476:1 Uncaught TypeError: temp is not a function
+    at <anonymous>:1:1
+(anonymous) @ VM2476:1
+//Object Type/Reference Type/Mutable Type
+undefined
+/*Array
+Object
+Function*/
+undefined
+var x = [10, 20];
+undefined
+var y = x;
+undefined
+y;
+(2) [10, 20]
+x;
+(2) [10, 20]
+y[0] = 1000;
+1000
+y;
+(2) [1000, 20]
+x;
+(2) [1000, 20]
