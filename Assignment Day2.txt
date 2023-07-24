@@ -1,0 +1,135 @@
+Q1. Why dot is used with Value Type?
+Ans1. The dot operator is used to access properties of an object, including value types. In JavaScript, value types are passed by value, which means that a copy of the value is made when it is passed to a function or assigned to a variable. This copy is a new instance of the value type, and it can be modified independently of the original value. Therefore, even though value types are immutable, their properties can be mutable. When you use the dot operator to access a property of a value type, you are accessing a reference to the property, not the property itself. This reference can be used to modify the property, even if the value type is immutable.
+
+Q2. What is null value and where we use it? Hint : typeof
+Ans2. In JavaScript, `null` is a value that represents the intentional absence of any object value. It is a primitive value that is assigned to a variable or property when there is no value available. The `typeof` operator returns `'object'` when applied to `null`, which is a quirk of the language. `null` is often used to initialize variables or properties to indicate that they have no value, or to reset them to a known state. It can also be used to explicitly indicate that a function or method returns no value.
+
+Q3. What is typeof?
+Ans3. In JavaScript, the `typeof` operator is used to determine the data type of a value or variable. It returns a string that indicates the type of the operand. Since typeof is an operator is provides the flexibility to use it with or without parenthesis.
+In some cases, using parentheses with the typeof operator makes the code written less prone to ambiguity.
+
+Q4. Null vs Undefined
+Ans4. Null: It is the intentional absence of the value. It is one of the primitive values of JavaScript.‘Null’ is a keyword in JavaScript that signifies ‘no value’ or nonexistence of any value. If you wish to shred a variable off its assigned value, you can simply assign ‘null’ to it. Besides this, like any other object, it is never implicitly assigned to a variable by JavaScript.
+Undefined: It means the value does not exist in the compiler. It is the global object.JavaScript assigns ‘undefined’ to any object that has been declared but not initialized or defined. In other words, in a case where no value has been explicitly assigned to the variable, JavaScript calls it ‘undefined’.
+
+Q5. == vs ===
+The == operator performs a loose equality comparison that performs type coercion if necessary to make the comparison possible.
+The === operator, on the other hand, performs a strict equality comparison that does not perform type coercion and requires the operands to have the same type (as well as the same value).
+The main difference between the == and === operator in javascript is that the == operator does the type conversion of the operands before comparison, whereas the === operator compares the values as well as the data types of the operands.
+
+
+Q6. Prime Number Compute Function
+Ans6. const n = parseInt(prompt("Enter any number:"));
+var isPrime = true;
+
+if(n == 1 || n == 0) {
+    console.log("It is neither prime not composite");
+}
+else {
+    for(let i = 2; i < n; i++) {
+        if(n%i==0) {
+            isPrime = false;
+            break;
+        }
+    }
+    if(isPrime == true) {
+    console.log(`${n} is a Prime number`);
+}
+    else {
+        console.log(`${n} is not a Prime number`);
+    }
+}
+
+
+Q7. ArmStrong Number Compute Function
+Ans7. const num = parseInt(prompt("Enter any number :"));
+let sum = 0;
+
+let temp = num;
+while(temp > 0) {
+    r = temp%10;
+    sum = sum + r*r*r;
+    
+    temp = parseInt(temp/10);
+} 
+
+if(sum == num) {
+    console.log(`${num} is Armstrong`);
+}
+else {
+    console.log(`${num} is not Armstrong`);
+}
+
+Q8. Q8. add() - 0
+add(10) - 10
+add(10,20) - 30
+add(10,”20”) - 30
+add(10,”ten”) - 10
+add(10, NaN) - 10
+add(10, 20, 30 ,40, 50)- 150
+Ans8. function add() {
+    var sum = 0;
+    let len = arguments.length;
+    
+    if(len == 0) {
+        sum = 0 ;
+        console.log(`The sum is = ${sum}`);
+    }
+    else if(len > 0) {
+        for(let i=0; i<len; i++) {
+            if(isNaN(parseInt(arguments[i])) == true) {
+                i = i+1;
+            }
+            else {
+                sum = sum + parseInt(arguments[i]);
+            }
+        }
+        console.log(`The sum is = ${sum}`);
+    }
+}
+add();
+add(10);
+add(10, 20);
+add(10, "20");
+add(10, "ten");
+add(10, NaN);
+add(10, 20, 30, 40, 50);
+
+// function add() {
+//     var sum = 0;
+//     for(let i=0; i<arguments.length; i++) {
+//         if(arguments[i] instanceof Array) {
+//             for(var j=0; j<arguments[i].length; j++) {
+//                 sum = isNaN(sum+parseInt(arguments[i][j]))?0:sum+parseInt(arguments[i][j]);
+//             }
+//             continue;
+//         }
+//         sum = isNaN(sum+parseInt(arguments[i]))?0:sum+parseInt(arguments[i]);
+//     }
+//     console.log(sum);
+// }
+// add(50, [20,30]);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
