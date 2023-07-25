@@ -1,0 +1,89 @@
+var date = new Date();
+var day = date.getDay();
+console.log(day);
+VM36:3 2
+undefined
+var myDate = new Date();
+var myDay = myDate.getDay();
+undefined
+var weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+undefined
+console.log("Today is : " + weekday[myDay]);
+VM296:1 Today is : Wednesday
+undefined
+var hours = myDate.getHours();
+undefined
+console.log(hours);
+VM473:1 11
+undefined
+    var myDate = new Date();
+    var myDay = myDate.getDay();
+
+    var weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    console.log("Today is : " + weekday[myDay]);
+
+
+    var hours = myDate.getHours();
+    
+    if(hours >= 12) {
+        console.log(`Current time is : ${myDate.getHours()} PM : ${myDate.getMinutes()} : ${myDate.getSeconds()}`);
+    }
+    else {
+        console.log(`Current time is : ${myDate.getHours()} AM : ${myDate.getMinutes()} : ${myDate.getSeconds()}`);
+    }
+VM477:6 Today is : Wednesday
+VM477:15 Current time is : 11 AM : 49 : 42
+undefined
+funtion Time() {
+    var myDate = new Date();
+    var myDay = myDate.getDay();
+
+    var weekday = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
+
+    console.log("Today is : " + weekday[myDay]);
+
+
+    var hours = myDate.getHours();
+    
+    if(hours >= 12) {
+        console.log(`Current time is : ${myDate.getHours()} PM : ${myDate.getMinutes()} : ${myDate.getSeconds()}`);
+    }
+    else {
+        console.log(`Current time is : ${myDate.getHours()} AM : ${myDate.getMinutes()} : ${myDate.getSeconds()}`);
+    }
+}
+Time();
+VM481:1 Uncaught SyntaxError: Unexpected identifier 'Time'
+function x(...args) {
+    return 1;
+}
+undefined
+x(10, 20, 30, 40, 50);
+1
+function x(...args) {
+    console.log(args);
+}
+undefined
+x;
+ƒ x(...args) {
+    console.log(args);
+}
+x(10,20,30,40,50);
+VM789:2 (5) [10, 20, 30, 40, 50]
+undefined
+function x(a,b,c,d,...args) {
+    console.log(args);
+}
+undefined
+var a = [1,2,3];
+undefined
+var b = [4,5,6,7];
+undefined
+var arr = [a];
+undefined
+var arr = [...a,...b];
+undefined
+console.log(arr);
+VM1302:1 (7) [1, 2, 3, 4, 5, 6, 7]0: 11: 22: 33: 44: 55: 66: 7length: 7[[Prototype]]: Array(0)
+undefined
