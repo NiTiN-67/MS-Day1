@@ -1,0 +1,156 @@
+//Primitives are immutable(nit modified/ can't alter), immutability is like save as option
+undefined
+var name = "nitin";
+undefined
+name.toUpperCase();
+'NITIN'
+console.log(name);
+VM390:1 nitin
+undefined
+var price = 100000000;
+undefined
+price.toLocaleString('hi-IN');
+'10,00,00,000'
+price.toLocaleString('en-US');
+'100,000,000'
+price.toLocaleString('fr-FR');
+'100 000 000'
+//{} -> OBJECT
+undefined
+//[] -> Array
+undefined
+//Reference types are mutable
+undefined
+//null-> dereferencing
+undefined
+var emp = {id:1001, Name:'Nitin'};
+undefined
+emp.id;
+1001
+emp.id; //member access operator
+1001
+emp['id']; //associative 
+1001
+//dot operator fails while accessing numeric keys
+undefined
+//dot operator also fails if there is a special character other than _
+undefined
+//these issues can be resolved using associative array
+undefined
+var dhoni = {Name:'MS Dhoni', age:42, 50:100, 100: 10, Full Address: 'Ranchi'};
+VM1722:1 Uncaught SyntaxError: Unexpected identifier 'Address'
+var dhoni = {Name:'MS Dhoni', age:42, 50:100, 100: 10, Full address: 'Ranchi'};
+VM1732:1 Uncaught SyntaxError: Unexpected identifier 'address'
+var dhoni = {Name:'MS Dhoni', age:42, 50:100, 100: 10, full address: 'Ranchi'};
+VM1740:1 Uncaught SyntaxError: Unexpected identifier 'address'
+var dhoni = {Name:'MS Dhoni', age:42, 50:100, 100: 10, full address : 'Ranchi'};
+VM1748:1 Uncaught SyntaxError: Unexpected identifier 'address'
+var dhoni = {Name:'MS Dhoni', age:42, 50:100, 100: 10, fulladdress : 'Ranchi'};
+undefined
+dhoni.50;
+VM1779:1 Uncaught SyntaxError: Unexpected number
+dhoni[50];
+100
+for(var key in dhoni) {
+    console.log(key, dhoni[key]);
+}
+VM1979:2 50 100
+VM1979:2 100 10
+VM1979:2 Name MS Dhoni
+VM1979:2 age 42
+VM1979:2 fulladdress Ranchi
+undefined
+var emp = {id:1001, Name:'Nitin'};
+undefined
+typeof emp;
+'object'
+emp instanceof Object;
+true
+typeof Object;
+'function'
+var o = {}; //object literal
+undefined
+var t = new Object(); //new keyword
+undefined
+o;
+{}
+t;
+{}
+//God function -> Object(type)
+undefined
+arr instance of Array;
+VM2433:1 Uncaught SyntaxError: Unexpected identifier 'instance'
+arr instanceof Array;
+VM2489:1 Uncaught ReferenceError: arr is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM2489:1
+var arr = {};
+undefined
+arr instanceof Object;
+true
+var arr = [];
+undefined
+arr instanceof Array;
+true
+var g = 100;
+undefined
+typeof g;
+'number'
+var r = new Number(120);
+undefined
+typeof r;
+'object'
+//AUTOBOXING
+undefined
+//UNBOXING
+undefined
+r.toString();
+'120'
+g.toString();
+'100'
+//FUNCTIONS
+undefined
+//Garbage Collection-> null, reassign, scope limit
+undefined
+var a = NaN;
+undefined
+parseInt(a);
+NaN
+var a1 = "ten";
+undefined
+parseInt(a);
+NaN
+function add() {
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++) {
+        sum = sum + (isNaN(parseInt(arguments[i])?0:parseInt(arguments[i]);
+VM3877:4 Uncaught SyntaxError: missing ) after argument list
+function add() {
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++) {
+        sum = sum + (isNaN(parseInt(arguments[i])?0:parseInt(arguments[i]));
+VM3883:4 Uncaught SyntaxError: Unexpected token ';'
+function add() {
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++) {
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+}
+undefined
+function add() {
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++) {
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+}
+undefined
+function add() {
+    var sum = 0;
+    for(var i = 0; i<arguments.length; i++) {
+        sum = sum + (isNaN(parseInt(arguments[i]))?0:parseInt(arguments[i]));
+    }
+    return sum;
+}
+undefined
+add(10, 20, '20', 'ten', NaN, 30);
+80
