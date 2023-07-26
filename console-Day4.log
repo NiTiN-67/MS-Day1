@@ -1,0 +1,236 @@
+function show(...arg){
+    console.log("I'm show", arg.length, arg instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arg[i]);
+    }
+}
+undefined
+show(1, 2, 3);
+VM501:2 I'm show 3 true
+VM501:4 1
+VM501:4 2
+VM501:4 3
+undefined
+function show(){
+    console.log("I'm show", arg.length, arg instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arg[i]);
+    }
+}
+
+undefined
+show(1,2,3);
+VM559:2 Uncaught ReferenceError: arg is not defined
+    at show (<anonymous>:2:29)
+    at <anonymous>:1:1
+show @ VM559:2
+(anonymous) @ VM612:1
+function show(){
+    console.log("I'm show", arguments.length, argument instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+undefined
+show(1,2,3);
+VM634:2 Uncaught ReferenceError: argument is not defined
+    at show (<anonymous>:2:47)
+    at <anonymous>:1:1
+show @ VM634:2
+(anonymous) @ VM695:1
+function show(){
+    console.log("I'm show", arguments.length, arguments instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+undefined
+show(1,2,3);
+VM702:2 I'm show 3 false
+VM702:3 Uncaught ReferenceError: arg is not defined
+    at show (<anonymous>:3:22)
+    at <anonymous>:1:1
+show @ VM702:3
+(anonymous) @ VM754:1
+function show(){
+    console.log("I'm show", arguments.length, arguments instanceof Array);
+    for(var i = 0; i<arguments.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+undefined
+show(1,2,3);
+VM765:2 I'm show 3 false
+VM765:4 1
+VM765:4 2
+VM765:4 3
+undefined
+function show(a,b,c,...q){
+    console.log("I'm show", arguments.length, arguments instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arguments[i]);
+    }
+}
+
+undefined
+show(1,2,3,4,5,6,7);
+VM842:2 I'm show 7 false
+VM842:3 Uncaught ReferenceError: arg is not defined
+    at show (<anonymous>:3:22)
+    at <anonymous>:1:1
+show @ VM842:3
+(anonymous) @ VM924:1
+function show(a,b,c,...q){
+    console.log("I'm show", arg.length, arg instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arg[i]);
+    }
+}
+
+undefined
+show(1,2,3,4,5,6,7);
+VM944:2 Uncaught ReferenceError: arg is not defined
+    at show (<anonymous>:2:29)
+    at <anonymous>:1:1
+show @ VM944:2
+(anonymous) @ VM949:1
+function show(a,b,c,...arg){
+    console.log("I'm show", arg.length, arg instanceof Array);
+    for(var i = 0; i<arg.length; i++) {
+        console.log(arg[i]);
+    }
+}
+
+undefined
+show(1,2,3,4,5,6,7);
+VM957:2 I'm show 4 true
+VM957:4 4
+VM957:4 5
+VM957:4 6
+VM957:4 7
+undefined
+//Falsy
+undefined
+/*falsw
+0,-0 and 0n
+"", '' (empty string)
+null, undefined and NaN*/
+undefined
+//Truthy and Falsy
+undefined
+var arr = [10,20,30];
+undefined
+console.log(array.length);
+VM1388:1 Uncaught ReferenceError: array is not defined
+    at <anonymous>:1:13
+(anonymous) @ VM1388:1
+arr.length;
+3
+arr = null;
+null
+if(arr) {
+    console.log("Array is present " + arr.length);
+}
+undefined
+else {
+VM1673:1 Uncaught SyntaxError: Unexpected token 'else'
+if(arr) {
+    console.log("Array is present " + arr.length);
+}
+else{
+    console.log("Array not present");
+}
+VM1797:5 Array not present
+undefined
+//Alternative of default -> truthy and falsy
+undefined
+function add(x,y){
+    var x = x || 0;
+    var y = y || 0;
+    return x + y;
+}
+undefined
+add();
+0
+//Rest vs Spread
+undefined
+var emp = {id:1001, name:'Ram'}
+undefined
+var dept = {dname:'IT',id:1002};
+undefined
+var merge(emp, dept);
+VM2476:1 Uncaught SyntaxError: Unexpected token '('
+var merge = {emp, dept};
+undefined
+console.log(merge);
+VM2621:1 {emp: {…}, dept: {…}}dept: {dname: 'IT', id: 1002}emp: {id: 1001, name: 'Ram'}[[Prototype]]: Object
+undefined
+console.log(...merge);
+VM2709:1 Uncaught TypeError: Spread syntax requires ...iterable[Symbol.iterator] to be a function
+    at <anonymous>:1:9
+(anonymous) @ VM2709:1
+var merge2 = {...emp, ...dept};
+undefined
+console.log(merge2);
+VM2863:1 {id: 1002, name: 'Ram', dname: 'IT'}
+undefined
+//Cloning can be achieved using spread 
+undefined
+//LET
+undefined
+/*->Block level scope
+Redeclaration in the same scope gives error
+VM3244:1 Uncaught SyntaxError: Invalid or unexpected token
+/*->Block level scope
+->Redeclaration in the same scope gives error
+->If accesed before initialisation makes a temporal dead zone*/
+undefined
+function output(){
+    console.log(i);
+    let i = 100;
+    console.log(i);
+}
+undefined
+output();
+VM3709:2 Uncaught ReferenceError: Cannot access 'i' before initialization
+    at output (<anonymous>:2:17)
+    at <anonymous>:1:1
+output @ VM3709:2
+(anonymous) @ VM3738:1
+let p = 98;
+undefined
+window.p;
+undefined
+var q= 97;
+undefined
+window.q;
+97
+//In let, hoisting is done without initialisation 
+undefined
+//CONST
+undefined
+//const
+undefined
+const MAX = 100;
+undefined
+MAX++;
+VM4142:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:4
+(anonymous) @ VM4142:1
+MAX = 200;
+VM4170:1 Uncaught TypeError: Assignment to constant variable.
+    at <anonymous>:1:5
+(anonymous) @ VM4170:1
+const PRODUCTS = [10,20,30,40];
+undefined
+PRODUCTS.push(80);
+5
+PRODUCTS;
+(5) [10, 20, 30, 40, 80]
+PRODUCTS[0] = 90;
+90
+PRODUCTS;
+(5) [90, 20, 30, 40, 80]
