@@ -1,0 +1,47 @@
+Q1. WAP to print area and perimeter of rectangle using prompt.
+Ans1.(a)Funtion
+function rect(a,b) {
+    var a = parseInt(prompt("Enter any number:"));
+    var b = parseInt(prompt("Enter any number:"));
+    var area = a*b;
+    var peri = 2*(a+b);
+    console.log(`Area of the given rectangle is = ${area}`);
+    console.log(`Perimeter of the given rectangle is = ${peri}`);
+}
+rect();
+
+(b)Arrow Funtion
+const rect1 = (a,b) => {
+    var a = parseInt(prompt("Enter any number = "));
+    var b = parseInt(prompt("Enter any number = "));
+    var area = a*b;
+    var peri = 2*(a+b);
+    console.log(`Area of the given rectangle is = ${area}`);
+    console.log(`Perimeter of the given rectangle is = ${peri}`);   
+}
+rect1();
+
+(c) Anonymous Function//Function Expression
+function calc(){
+    //anonymous function
+    var add = function(x,y){
+        return x+y;
+    }
+    var sub = function(x,y){
+        return x-y;
+    }
+    return {add, sub}; //[add,sub];
+}
+calc().add(4,3); //calc()[1](7,3);
+
+(d) Named function expression
+function calc1() {
+    var sum = function sum(x,y){
+        return x+y;
+    }
+    var diff = function diff(x,y){
+        return x-y;
+    }
+    return {sum,diff}; //
+}
+calc1().sum(4,5); //
