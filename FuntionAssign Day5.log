@@ -1,0 +1,120 @@
+var salary = [15000, 20000, 5000, 30000, 7000];
+let sum_sal = salary.reduce(
+    (acc, cSal) => (cSal>10000) ? (acc+cSal) : (acc+0)
+);
+console.log("Sum of salaries > Rs10000 = Rs",sum_sal);
+VM35:5 Sum of salaries > Rs10000 = Rs 65000
+undefined
+var elements = [9,8,12,50,34,18];
+undefined
+let maxElement = elements.reduce(
+    (acc,cElement) => (acc > cElement) ? acc : cElement
+);
+undefined
+console.log("Max element is : ", maxElement);
+VM572:1 Max element is :  50
+undefined
+var arr = [];
+undefined
+var arr = [6];
+undefined
+for(let i=0; i<6;i++){
+    arr[i] = parseInt(prompt("Enter any value:");
+}
+VM977:2 Uncaught SyntaxError: missing ) after argument list
+var salary1 = [15000, 20000, 5000, 30000, 7000];
+let countSal = salary1.reduce(
+    (acc,cv) => {
+        var count = 0;
+        if(cv > 10000) {
+            count++;
+        }
+        return count;
+    });
+undefined
+console.log(countSal);
+VM1069:1 0
+undefined
+var salary1 = [15000, 20000, 5000, 30000, 7000];
+let countSal = salary1.reduce(
+    (acc,cv) => {
+        var count = 0;
+        if(cv > 10000) {
+            acc++;
+        }
+        return acc;
+    },0);
+undefined
+console.log(countSal);
+VM1187:1 3
+undefined
+var salary1 = [15000, 20000, 5000, 30000, 7000];
+let countSal = salary1.reduce(
+    (acc,cv) => {
+        var count = 0;
+        if(cv > 10000) {
+            acc++;
+        }
+        return acc;
+    },0);
+undefined
+var emp = [{Name : "Virat", Salary : 10000}, {Name : "Msd", Salary : 50000}, {Name : "Rohit", Salary : 20000}, {Name : "Jadeja", Salary : 40000}];
+emp.sort((a,b) => a.Salary-b.Salary);
+(4) [{…}, {…}, {…}, {…}]0: {Name: 'Virat', Salary: 10000}1: {Name: 'Rohit', Salary: 20000}2: {Name: 'Jadeja', Salary: 40000}3: {Name: 'Msd', Salary: 50000}length: 4[[Prototype]]: Array(0)
+emp.sort((a,b)=> (a.Name.localeCompare(b.Name)));
+(4) [{…}, {…}, {…}, {…}]0: {Name: 'Jadeja', Salary: 40000}1: {Name: 'Msd', Salary: 50000}2: {Name: 'Rohit', Salary: 20000}3: {Name: 'Virat', Salary: 10000}length: 4[[Prototype]]: Array(0)
+var salaries = [10000, 20000, 5000, 6000, 22000];
+undefined
+var newSal = salaries.filter(e=>true);
+undefined
+newSal'
+VM1992:1 Uncaught SyntaxError: Invalid or unexpected token
+newSal;
+(5) [10000, 20000, 5000, 6000, 22000]
+newSal.map(e=>e-(e*0.1));
+(5) [9000, 18000, 4500, 5400, 19800]
+var salaries = [10000, 20000, 5000, 6000, 22000];
+
+var newSal = salaries.filter(e=>true);
+console.log("Salaries : ",newSal);
+
+console.log("Salaries after 10% tax deduction :", newSal.filter(e=>e-(e*0.1)));
+VM2124:4 Salaries :  (5) [10000, 20000, 5000, 6000, 22000]
+VM2124:6 Salaries after 10% tax deduction : (5) [10000, 20000, 5000, 6000, 22000]0: 100001: 200002: 50003: 60004: 22000length: 5[[Prototype]]: Array(0)
+undefined
+var salaries = [10000, 20000, 5000, 6000, 22000];
+
+var newSal = salaries.filter(e=>true);
+console.log("Salaries : ",newSal);
+
+console.log("Salaries after 10% tax deduction :", newSal.filter(e=>e=e-(e*0.1)));
+VM2132:4 Salaries :  (5) [10000, 20000, 5000, 6000, 22000]
+VM2132:6 Salaries after 10% tax deduction : (5) [10000, 20000, 5000, 6000, 22000]
+undefined
+var salaries = [10000, 20000, 5000, 6000, 22000];
+
+var newSal = salaries.filter(e=>true);
+console.log("Salaries : ",newSal);
+
+console.log("Salaries after 10% tax deduction :", newSal.filter(e=>e==e-(e*0.1)));
+VM2135:4 Salaries :  (5) [10000, 20000, 5000, 6000, 22000]
+VM2135:6 Salaries after 10% tax deduction : []length: 0[[Prototype]]: Array(0)
+undefined
+var salaries = [10000, 20000, 5000, 6000, 22000];
+
+var newSal = salaries.filter(e=>true);
+console.log("Salaries : ",newSal);
+const val=newSal.filter(e=>e=e-(e*0.1)));
+
+console.log("Salaries after 10% tax deduction :",val); 
+VM2174:5 Uncaught SyntaxError: Unexpected token ')'
+var salaries = [10000, 20000, 5000, 6000, 22000];
+
+var newSal = salaries.filter(e=>true);
+console.log("Salaries : ",newSal);
+const val=newSal.filter(e=>e=e-(e*0.1));
+
+console.log("Salaries after 10% tax deduction :",val); 
+VM2177:4 Salaries :  (5) [10000, 20000, 5000, 6000, 22000]
+VM2177:7 Salaries after 10% tax deduction : (5) [10000, 20000, 5000, 6000, 22000]0: 100001: 200002: 50003: 60004: 22000length: 5[[Prototype]]: Array(0)
+undefined

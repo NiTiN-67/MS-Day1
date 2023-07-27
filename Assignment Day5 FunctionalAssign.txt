@@ -1,0 +1,44 @@
+Q1. Create an Array of Salaries, Now do the Sum of Salaries who is greater than 10000.
+Hint : reduce function
+Ans1. var salary = [15000, 20000, 5000, 30000, 7000];
+let sum_sal = salary.reduce(
+    (acc, cSal) => (cSal>10000) ? (acc+cSal) : (acc+0)
+);
+console.log("Sum of salaries > Rs10000 = Rs",sum_sal);
+
+Q2. Get the Max Salary from the Array
+Hint : reduce function
+Ans2. var elements = [9,8,12,50,34,18];
+let maxElement = elements.reduce(
+    (acc,cElement) => (acc > cElement) ? acc : cElement
+);
+console.log("Max element is : ", maxElement);
+
+Q3. Count Those Salaries whose > 10000, note : don't use filter.
+Hint : reduce function
+Ans3. var salary1 = [15000, 20000, 5000, 30000, 7000];
+let countSal = salary1.reduce(
+    (acc,cv) => {
+        var count = 0;
+        if(cv > 10000) {
+            acc++;
+        }
+        return acc;
+    },0);
+    console.log("No. of peope with salary > Rs10000 = ", countSal);
+
+Q4. Maintain an Array of Employees. (Array of Objects), Now Sort the Employee by Name and Salary.
+Ans4. var emp = [{Name : "Virat", Salary : 10000}, {Name : "Msd", Salary : 50000}, {Name : "Rohit", Salary : 20000}, {Name : "Jadeja", Salary : 40000}];
+emp.sort((a,b) => a.Salary-b.Salary);
+console.log(emp);
+emp.sort((a,b)=> (a.Name.localeCompare(b.Name)));
+console.log(emp);
+
+Q5. In Employee Salaries add 10% Tax in Each Employee Salary and Store in a new Array, So don't modify the Orginal Array.
+Hint : filter, map
+Ans5.var salaries = [10000, 20000, 5000, 6000, 22000];
+
+var newSal = salaries.filter(e=>true);
+console.log("Salaries : ",newSal);
+
+console.log("Salaries after 10% tax deduction :", newSal.map(e=>e-(e*0.1)));
