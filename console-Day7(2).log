@@ -1,0 +1,22 @@
+const fetchData = async ()=>{
+
+    const resp = await 
+        fetch('https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json');
+    const data = await resp.json();
+}
+undefined
+fetchData();
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "pending"[[PromiseResult]]: undefined
+async function makeNetworkCall(){
+    const promise = await fetch('https://gist.githubusercontent.com/kshirsagarps/36fade16fa39202715656ef487aaf7b0/raw/2b682e589ef283f06be42d2799dfa54f57794a6e/Pizza.json');
+    const data = await promise.json();
+    console.log('Data is ', data);
+}
+undefined
+make
+VM95:1 Uncaught ReferenceError: make is not defined
+    at <anonymous>:1:1
+(anonymous) @ VM95:1
+makeNetworkCall();
+Promise {<pending>}[[Prototype]]: Promise[[PromiseState]]: "fulfilled"[[PromiseResult]]: undefined
+VM66:4 Data is  {Vegetarian: Array(3)}Vegetarian: Array(3)0: {id: 10, name: 'Vegan Veggie', price: '23.95', menu_description: 'Daiya vegan mozzarella, paired with fresh veggies', classifications: {…}, …}1: {id: 11, name: 'Veggie Zupreme', price: '19.95', menu_description: 'The freshest, locally sourced veggies', classifications: {…}, …}2: {id: 12, name: 'The O.G.', price: '16.95', menu_description: 'The Margherita—with California flair', classifications: {…}, …}length: 3[[Prototype]]: Array(0)[[Prototype]]: Object
