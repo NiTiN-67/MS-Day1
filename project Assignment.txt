@@ -1,0 +1,8 @@
+print total amount in Basket 
+GST 18%
+Add a pay now button  (link to  razor pay)
+hint using reduce function 
+razor pay -> documentation -> web integration 
+RAZOR PAY  BUILD INTEGRATION 
+RAZOR PAY CARD NUMBER FOR TESTING 
+account and settings -> API  KEY
